@@ -1,0 +1,17 @@
+erpc::ScopedCallback done(_done);
+    Status status = Check1(request);
+    if (!status.IsOk())
+    {
+         response->set_errorcode(status.Code());
+         return;
+    }
+    status = Check2(request);
+    if (!status.IsOk())
+    {
+         response->set_errorcode(status.Code());
+         return;
+    }
+    DoSomeRealWork(...);
+————————————————
+版权声明：本文为CSDN博主「帅气滴点C」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/baidu_31437863/article/details/127311528
