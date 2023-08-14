@@ -1,0 +1,6 @@
+ table_schema = conn.createTable( "Invoice" );
+        table_schema.createColumn( "inv_no", Domain.INTEGER );
+        table_schema.createColumn( "name", Domain.VARCHAR, 50 );
+        table_schema.createColumn( "date", Domain.DATE );
+        index_schema = table_schema.createPrimaryIndex( "prime_keys" );
+        index_schema.addColumn( "inv_no", IndexSchema.ASCENDING );
